@@ -77,7 +77,19 @@
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Inicio </a>
+            <a class="nav-link active" href="#"><i class="icon-speedometer"></i> Album </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Vocalista </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Genero </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Cancion </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Artista </a>
           </li>
 
         </ul>
@@ -88,7 +100,7 @@
     <main class="main">
 
       <div class="container-fluid">
-
+        @yield('contenido')
       </div>
       <!-- /.conainer-fluid -->
     </main>
