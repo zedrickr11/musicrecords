@@ -77,19 +77,19 @@
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="icon-speedometer"></i> Album </a>
+            <a class="nav-link active" href="#"><i class="icon-music-tone"></i> Album </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Vocalista </a>
+            <a class="nav-link" href="#"><i class="icon-microphone"></i> Vocalista </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Genero </a>
+            <a class="nav-link" href="#"><i class="icon-volume-2"></i> Genero </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Cancion </a>
+            <a class="nav-link" href="#"><i class="fa fa-music"></i> Cancion </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-speedometer"></i> Artista </a>
+            <a class="nav-link" href="#"><i class="icon-social-github"></i> Artista </a>
           </li>
 
         </ul>
