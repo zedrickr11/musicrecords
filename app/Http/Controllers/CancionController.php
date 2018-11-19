@@ -61,9 +61,11 @@ class CancionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+
+    public function show(Cancion $cancion)
     {
-        //
+      return view('music.cancion.show', compact('cancion'));
+
     }
 
     /**
@@ -74,7 +76,10 @@ class CancionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cancion=Cancion::findOrFail($id);
+        $album=Album::all();
+        $vocalista=Vocalista::pluck('nombre','id');
+        return view('music.cancion.edit',compact('cancion','vocalista','album'));
     }
 
     /**
@@ -86,7 +91,10 @@ class CancionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $cancion=Cancion::findOrFail($id);
+      $cancion->update($request->all());
+      $cancion->vocalist()->sync($request->vocalista_id);
+      return redirect()->route('cancion.index');
     }
 
     /**
@@ -97,6 +105,7 @@ class CancionController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Cancion::findOrFail($id)->delete();
+      return redirect()->route('cancion.index');
     }
 }
