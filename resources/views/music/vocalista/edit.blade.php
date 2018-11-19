@@ -5,7 +5,7 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item">MusicRecords</li>
       <li class="breadcrumb-item"><a href="#">Vocalista</a></li>
-      <li class="breadcrumb-item active">Nuevo</li>
+      <li class="breadcrumb-item active">Editar</li>
       <!-- Breadcrumb Menu-->
 
     </ol>

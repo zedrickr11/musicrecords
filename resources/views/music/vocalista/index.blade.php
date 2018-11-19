@@ -17,7 +17,7 @@
             <div class="card">
               <div class="card-header">
                 <i class="fa fa-align-justify"></i> Vocalista
-              <a href="vocalista/create"> <button type="button" class="btn btn-success"> Nuevo</button></a> 
+              <a href="vocalista/create"> <button type="button" class="btn btn-success"> Nuevo</button></a>
               </div>
               <div class="card-body">
                 <table class="table table-responsive-sm table-striped">
@@ -35,12 +35,12 @@
                       <td>{{ $art->nombre }}</td>
                       <td>
 
-                        <a href="{{route('artista.edit',$art->id)}}">
+                        <a href="{{route('vocalista.edit',$art->id)}}">
                      <button type="button" class="btn btn-warning btn-sm" name="button">Editar</button>
                    </a>
 
 
-                   <form style="display: inline" method="POST" action="{{route('artista.destroy', $art->id)}}">
+                   <form style="display: inline" method="POST" action="{{route('vocalista.destroy', $art->id)}}">
                    {!!method_field('DELETE')!!}
                    {!!csrf_field()!!}
                      <button type="submit" class="btn btn-danger btn-sm" name="button">Eliminar</button>
