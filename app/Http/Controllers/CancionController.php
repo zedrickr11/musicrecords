@@ -49,8 +49,10 @@ class CancionController extends Controller
       $cancion->save();
 
       $vocalista = $request->vocalista_id;
-      //dd($category);
+
       $cancion->vocalist()->attach($vocalista);
+
+      return redirect()->route('cancion.index');
     }
 
     /**

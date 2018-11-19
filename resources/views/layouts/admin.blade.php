@@ -14,20 +14,20 @@
   <meta name="description" content="Prime - Bootstrap 4 Admin Template">
   <meta name="author" content="Łukasz Holeczek">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,jQuery,CSS,HTML,RWD,Dashboard,Vue,Vue.js,React,React.js">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
   <title>MusicRecords</title>
 
   <!-- Icons -->
-  <link href="vendors/css/font-awesome.min.css" rel="stylesheet">
-  <link href="vendors/css/simple-line-icons.min.css" rel="stylesheet">
+  <link href="{{asset('vendors/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendors/css/simple-line-icons.min.css')}}" rel="stylesheet">
 
   <!-- Main styles for this application -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
   <!-- Styles required by this views -->
-  <link href="vendors/css/daterangepicker.min.css" rel="stylesheet">
-  <link href="vendors/css/gauge.min.css" rel="stylesheet">
-  <link href="vendors/css/toastr.min.css" rel="stylesheet">
+  <link href="{{asset('vendors/css/daterangepicker.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendors/css/gauge.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendors/css/toastr.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -71,7 +71,7 @@
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <img src="img/git.png" class="img-avatar" alt="user">
+          <img src="{{asset('img/git.png')}}" class="img-avatar" alt="user">
         </a>
         <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header text-center">
@@ -88,19 +88,17 @@
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="icon-music-tone"></i> Album </a>
+            <a class="nav-link " href="{{ url('musicrecords/album') }}"><i class="icon-music-tone"></i> Album </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-microphone"></i> Vocalista </a>
+            <a class="nav-link" href="{{ url('musicrecords/vocalista') }}"><i class="icon-microphone"></i> Vocalista </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('musicrecords/cancion') }}"><i class="fa fa-music"></i> Cancion </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-volume-2"></i> Genero </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fa fa-music"></i> Cancion </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="icon-social-github"></i> Artista </a>
+            <a class="nav-link" href="{{ url('musicrecords/artista') }}"><i class="icon-social-github"></i> Artista </a>
           </li>
 
         </ul>
@@ -110,9 +108,9 @@
     <!-- Main content -->
     <main class="main">
 
-      <div class="container-fluid">
+
         @yield('contenido')
-      </div>
+
       <!-- /.conainer-fluid -->
     </main>
 
@@ -123,23 +121,23 @@
   </footer>
 
   <!-- Bootstrap and necessary plugins -->
-  <script src="vendors/js/jquery.min.js"></script>
-  <script src="vendors/js/popper.min.js"></script>
-  <script src="vendors/js/bootstrap.min.js"></script>
-  <script src="vendors/js/pace.min.js"></script>
+  <script src="{{asset('vendors/js/jquery.min.js')}}"></script>
+  <script src="{{asset('vendors/js/popper.min.js')}}"></script>
+  <script src="{{asset('vendors/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('vendors/js/pace.min.js')}}"></script>
 
   <!-- Prime main scripts -->
 
-  <script src="js/app.js"></script>
+  <script src="{{asset('js/app.js')}}"></script>
 
   <!-- Plugins and scripts required by this views -->
-  <script src="vendors/js/toastr.min.js"></script>
-  <script src="vendors/js/gauge.min.js"></script>
-  <script src="vendors/js/moment.min.js"></script>
-  <script src="vendors/js/daterangepicker.min.js"></script>
+  <script src="{{asset('vendors/js/toastr.min.js')}}"></script>
+  <script src="{{asset('vendors/js/gauge.min.js')}}"></script>
+  <script src="{{asset('vendors/js/moment.min.js')}}"></script>
+  <script src="{{asset('vendors/js/daterangepicker.min.js')}}"></script>
 
   <!-- Custom scripts required by this view -->
-  <script src="js/views/main.js"></script>
-
+  <script src="{{asset('js/views/main.js')}}"></script>
+  @stack('scripts')
 </body>
 </html>
