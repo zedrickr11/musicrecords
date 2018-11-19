@@ -75,10 +75,10 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header text-center">
-            <strong>Configuracion</strong>
+            <strong>{{ Auth::user()->name }}</strong>
           </div>
           <div class="divider"></div>
-          <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Cerrar sesion</a>
+          <a class="dropdown-item" href="{{ route('cerrar') }}"><i class="fa fa-lock"></i> Cerrar sesion</a>
         </div>
       </li>
     </ul>

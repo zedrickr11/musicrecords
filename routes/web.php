@@ -12,10 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.admin');
+    return view('auth.login');
 });
 
 Route::resource('musicrecords/album','AlbumController');
 Route::resource('musicrecords/artista','ArtistaController');
 Route::resource('musicrecords/vocalista','VocalistaController');
 Route::resource('musicrecords/cancion','CancionController');
+
+Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout')->name('cerrar');
+
+Route::get('/home', 'HomeController@index')->name('home');
